@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppProxyHeaderBasedApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- load bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
+    <!-- load fontawesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-custom"
+      style="background-color: #00223d"
+    >
+      <a class="navbar-brand navbar-text" href="/"
+        >AzureAppProxy - HeaderBased App
+      </a>
+      
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+      </div>
+    </nav>
+
+    <div class="container">
+        <div class="headers_title">
+            <h2>Request Headers Received: <%= Object.keys(headers).length %></h2>
+        </div>
+        
+        <div class="headers_container">
+            <h2>Headers:</h2>
+            
+        </div>
+
+        <div class="table-container">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th class="custom-th">Header Name</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for (const [key, value] of Object.entries(headers)) { %>
+                    <tr>
+                    <td><strong><%= key %>:</strong></td>
+                    <td><%= value %></td>
+                    </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap Scripts  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!---->
+  </body>
+</html>

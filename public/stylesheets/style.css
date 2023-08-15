@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  font-family: "Nunito", sans-serif;
+}
+
+.navbar-custom .navbar-text {
+  color: #ffff;
+  font-size: 20px;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.headers_title {
+  width: 100%;
+  text-align: center;
+  margin: 30px;
+}
+
+.headers_container {
+  width: 100%;
+  background: #000;
+  color: #ffff;
+  margin-bottom: 20px;
+}
+
+.headers_container h2 {
+  margin-left: 10px;
+}
+
+.table-container {
+  max-height: 65vh;
+  overflow-y: scroll;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+.custom-th {
+  width: 60%;
+}
